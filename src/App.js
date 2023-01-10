@@ -1,14 +1,10 @@
 /** @format */
 
 import React from "react";
-import MainLayout from "./layout/mainLayout";
+import DashBoard from "./views/dashboard";
 
 const App = () => {
-  return (
-    <div>
-      <MainLayout>Man</MainLayout>
-    </div>
-  );
+  return <DashBoard />;
 };
 
 export default App;

@@ -9,7 +9,12 @@ export default function MainLayout({ children }) {
     <Box mt={10} ml={15}>
       <Box>
         <Box>
-          <Typography variant="h1">GitHub Jobs</Typography>
+          <Typography variant="h3">
+            GitHub
+            <span style={{ fontSize: "36px" }} variant="body2">
+              Jobs
+            </span>
+          </Typography>
         </Box>
       </Box>
 
