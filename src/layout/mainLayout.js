@@ -6,14 +6,11 @@ import { Typography } from "@mui/material";
 
 export default function MainLayout({ children }) {
   return (
-    <Box mt={10} ml={15}>
+    <Box mt={10} ml={15} mr={10}>
       <Box>
         <Box>
           <Typography variant="h4">
-            GitHub
-            <span style={{ fontSize: "36px" }} variant="body2">
-              Jobs
-            </span>
+           
           </Typography>
         </Box>
       </Box>
