@@ -8,17 +8,20 @@ const location = ["London", "AmsterDam", "uk"];
 
 const DashboardPanel = () => {
   return (
-    <Grid>
-      <Grid>
-        <Typography variant="h5" sx={{ color: "#334680" }}>
+    <Grid container spacing={2}>
+      <Grid md={4}>
+        <Typography variant="h5" >
           <Checkbox {...label} defaultChecked /> Full time
         </Typography>
-        <Typography sx={{ color: "#334680" }} variant="h4">
+        <Typography  variant="h4">
           Location
           {location.map((user) => (
             <div className="user">{user}</div>
           ))}
         </Typography>
+      </Grid>
+      <Grid>
+ mmmmmmmmmmmmmmmmm
       </Grid>
     </Grid>
   );

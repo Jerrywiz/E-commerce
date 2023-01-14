@@ -9,7 +9,7 @@ export default function MainLayout({ children }) {
     <Box mt={10} ml={15}>
       <Box>
         <Box>
-          <Typography variant="h3">
+          <Typography variant="h4">
             GitHub
             <span style={{ fontSize: "36px" }} variant="body2">
               Jobs
