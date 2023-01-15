@@ -9,7 +9,7 @@ import Card from "@mui/material/Card"
 
 
 
-const DashboardCard = ({ Data, index }) => {
+const DashboardCard = ({ Data}) => {
   
   
   return (

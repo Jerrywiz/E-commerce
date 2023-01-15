@@ -10,7 +10,7 @@ const location = ["London", "AmsterDam", "uk"];
 
 const DashboardPanel = () => {
   return (
-    <Grid container spacing={3}>
+    <Grid container spacing={3} mt={4}>
       <Grid md={4}>
         <Typography variant="h5" >
           <Checkbox {...label} defaultChecked /> Full time
