@@ -10,7 +10,7 @@ import  BackGroundImage from "../Assets/Background.png"
 
 export default function MainLayout({ children }) {
   return (
-    <Box m={10} >
+    <Box m={15} >
       <Box>
         <Box>
           <Typography variant="h4">

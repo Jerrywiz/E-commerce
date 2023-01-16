@@ -2,6 +2,9 @@
 
 import React from "react";
 import { Grid, Checkbox, Typography, Box } from "@mui/material";
+
+
+
 import { Jobs } from "../../mock";
 import DashboardCard from "./dashboardCard";
 
@@ -16,6 +19,7 @@ const DashboardPanel = () => {
           <Checkbox {...label} defaultChecked /> Full time
         </Typography>
         <Typography  variant="h4">
+          
           Location
           {location.map((user) => (
             <div className="user">{user}</div>
@@ -23,6 +27,7 @@ const DashboardPanel = () => {
         </Typography>
       
       </Grid >
+  
       <Grid md={8} >
         {Jobs.map((data, index) => (
          <Box mt={4}>
@@ -30,6 +35,8 @@ const DashboardPanel = () => {
          </Box>
         ))}
         </Grid>
+      
+    
      
       
     </Grid>

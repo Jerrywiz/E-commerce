@@ -1,43 +1,42 @@
-import React from "react"
-import { CardContent, CardActionArea } from "@mui/material"
-import Box from "@mui/material/Box"
-import { Typography } from "@mui/material"
+import React from "react";
+import { CardContent, CardActionArea } from "@mui/material";
+import Box from "@mui/material/Box";
+import { Typography } from "@mui/material";
+import PublicIcon from "@mui/icons-material/Public";
+import AccessTimeIcon from "@mui/icons-material/AccessTime";
+import {Link} from "@mui/material";
 
-import Card from "@mui/material/Card"
+import Card from "@mui/material/Card";
 
-
-
-
-
-const DashboardCard = ({ Data}) => {
-  
-  
+const DashboardCard = ({ Data }) => {
   return (
-   
-        <Card>
-          <CardActionArea sx={{ pointerEvents: "none" }}>
-          <CardContent >
-                <Typography>
-                 {Data?.name}
-                </Typography>
-                <Typography>
-                 {Data?.description}
-                </Typography>
-                <Box display="flex" justifyContent="space-between">
-<Typography>{Data?.type}</Typography>
-<Box display="flex">
-<Typography mr={5}>{Data?.Location}</Typography>
-<Typography> {Data?.day}</Typography>
-</Box>
-                </Box>
-              </CardContent>
+  
+    <Card>
+      <CardActionArea sx={{ pointerEvents: "none" }}>
+        <CardContent>
+          <Typography>{Data?.name}</Typography>
+          <Typography>{Data?.description}</Typography>
+          <Box display="flex" justifyContent="space-between">
+            <Typography>{Data?.type}</Typography>
+            <Box display="flex">
+            <PublicIcon/>
+              <Typography mr={1} ml={1}>
+                {Data?.Location}
+              </Typography>
+              <AccessTimeIcon />
+              <Typography ml={1}>
+              
+                
+                
+                {Data?.day}
+              </Typography>
+            </Box>
+          </Box>
+        </CardContent>
+      </CardActionArea>
+    </Card>
+ 
+  );
+};
 
-             
-         
-          </CardActionArea>
-        </Card>
-    
-  )
-}
-
-export default DashboardCard
+export default DashboardCard;
