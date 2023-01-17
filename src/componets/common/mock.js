@@ -43,6 +43,7 @@ const jobDetails ={
   role:"Front-End Software Engineer ",
   type:"Full Time",
   name:"Kasisto",
+  day:5,
   location:"New York",
   content:` Humanizing Digital Experiences®Kasisto’s
    Digital Experience Platform, KAI, is designed for financial institutions to deliver 

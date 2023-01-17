@@ -7,10 +7,11 @@ import AccessTimeIcon from "@mui/icons-material/AccessTime";
 
 
 import Card from "@mui/material/Card";
+import { Link } from "react-router-dom";
 
 const DashboardCard = ({ Data }) => {
   return (
-  
+  <Link to="/jobdetails">
     <Card>
       <CardActionArea sx={{ pointerEvents: "none" }}>
         <CardContent>
@@ -35,6 +36,7 @@ const DashboardCard = ({ Data }) => {
         </CardContent>
       </CardActionArea>
     </Card>
+    </Link>
  
   );
 };
