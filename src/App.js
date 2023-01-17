@@ -9,12 +9,14 @@ import {
   Link
 }from 'react-router-dom';
 import DashBoard from "./views/dashboard";
+import JobDetails from "./views/jobDetails/JobDetails";
 
 const App = () => {
   
   return(
     <Router>
   <DashBoard />
+  <JobDetails />
   </Router>
 )
 
