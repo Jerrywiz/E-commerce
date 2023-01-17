@@ -3,22 +3,33 @@
 import React from "react";
 import Box from "@mui/material/Box";
 import { Typography } from "@mui/material";
+import { TextField } from "@mui/material";
+import BackGroundImage from "../Assets/Background.png";
 
 export default function MainLayout({ children }) {
   return (
-    <Box mt={10} ml={15}>
-      <Box>
+    <>
+      <Typography variant="h2" ml={10} mt={5}>Github Jobs</Typography>
+      <Box ml={10} mt={5}>
         <Box>
-          <Typography variant="h3">
-            GitHub
-            <span style={{ fontSize: "36px" }} variant="body2">
-              Jobs
-            </span>
-          </Typography>
+          <Box>
+            <Typography variant="h4">
+              <Box
+                sx={{
+                  backgroundImage: `url(${BackGroundImage})`,
+                  height: "138px",
+                }}
+              >
+                <Box>
+                  <TextField placeholder="Title, companies, expertise or benefits"></TextField>
+                </Box>
+              </Box>
+            </Typography>
+          </Box>
         </Box>
-      </Box>
 
-      {children}
-    </Box>
+        {children}
+      </Box>
+    </>
   );
 }

@@ -29,7 +29,7 @@ const handleApiError = (error) => {
             [`error-${i}`]: `${v}`
           }
         })
-        // return `${keys[0]}: ${firstItem[0]}`;
+       
         return JSON.stringify(toastMsg)
       }
       if (typeof firstItem === "string") return firstItem
@@ -60,8 +60,6 @@ const handleApiError = (error) => {
             }
           })
         }
-
-        // return `${keys[0]}: ${firstItem[0]}`;
         return JSON.stringify(toastMsg)
       }
 

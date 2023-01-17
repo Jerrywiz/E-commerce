@@ -1,25 +1,44 @@
 /** @format */
 
 import React from "react";
-import { Grid, Checkbox, Typography } from "@mui/material";
+import { Grid, Checkbox, Typography, Box } from "@mui/material";
+
+
+
+import { Jobs } from "../../mock";
+import DashboardCard from "./dashboardCard";
 
 const label = { inputProps: { "aria-label": "Checkbox demo" } };
 const location = ["London", "AmsterDam", "uk"];
 
 const DashboardPanel = () => {
   return (
-    <Grid>
-      <Grid>
-        <Typography variant="h5" sx={{ color: "#334680" }}>
+    <Grid container spacing={3} mt={4}>
+      <Grid md={4}>
+        <Typography variant="h5" >
           <Checkbox {...label} defaultChecked /> Full time
         </Typography>
-        <Typography sx={{ color: "#334680" }} variant="h4">
+        <Typography  variant="h4">
+          
           Location
           {location.map((user) => (
             <div className="user">{user}</div>
           ))}
         </Typography>
-      </Grid>
+      
+      </Grid >
+  
+      <Grid md={8} >
+        {Jobs.map((data, index) => (
+         <Box mt={4}>
+           <DashboardCard key={data.id} Data={data} index={index} />
+         </Box>
+        ))}
+        </Grid>
+      
+    
+     
+      
     </Grid>
   );
 };
