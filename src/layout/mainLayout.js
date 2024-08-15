@@ -1,35 +1,101 @@
-/** @format */
+import React, { useState } from "react";
+import {
+  Box,
+  Typography,
+  TextField,
+  InputAdornment,
+  Tab,
+  Tabs,
+} from "@mui/material";
+import SearchIcon from "@mui/icons-material/Search";
 
-import React from "react";
-import Box from "@mui/material/Box";
-import { Typography } from "@mui/material";
-import { TextField } from "@mui/material";
-import BackGroundImage from "../Assets/Background.png";
+const MainLayout = ({ children }) => {
+  const [activeTab, setActiveTab] = useState(0);
 
-export default function MainLayout({ children }) {
   return (
     <>
-      <Typography variant="h2" ml={10} mt={5}>Github Jobs</Typography>
-      <Box ml={10} mt={5}>
-        <Box>
-          <Box>
-            <Typography variant="h4">
-              <Box
-                sx={{
-                  backgroundImage: `url(${BackGroundImage})`,
-                  height: "138px",
-                }}
-              >
-                <Box>
-                  <TextField placeholder="Title, companies, expertise or benefits"></TextField>
-                </Box>
-              </Box>
-            </Typography>
-          </Box>
+      <Box
+        sx={{
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+      >
+        <Box
+          sx={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            p: 2,
+            borderRadius: 2,
+            width: "100%",
+            maxWidth: "800px",
+          }}
+        >
+          <Typography sx={{ fontStyle: "italic", mr: 2 }}>UPCYCLE</Typography>
+          <TextField
+            placeholder="Search"
+            sx={{
+              width: "100%",
+              "& .MuiInputBase-root": { height: 20 },
+              "& .MuiOutlinedInput-input": { fontSize: "8px" },
+              "& .MuiSvgIcon-root": { fontSize: 15 },
+            }}
+            InputProps={{
+              startAdornment: (
+                <InputAdornment position="start">
+                  <SearchIcon />
+                </InputAdornment>
+              ),
+            }}
+          />
         </Box>
 
+        <Box
+          sx={{
+            display: "flex",
+            justifyContent: "center",
+            width: "75%",
+            boxShadow: 2,
+            borderRadius: 3,
+          }}
+        >
+          <Tabs
+            value={activeTab}
+            onChange={(event, newValue) => {
+              setActiveTab(newValue);
+            }}
+            sx={{
+              mt: 1,
+              "& .MuiTabs-indicator": { bottom: "0px" },
+            }}
+          >
+            {[
+              "All Category",
+              "Hot Offers",
+              "Gift Boxes",
+              "Projects",
+              "Menu Items",
+            ].map((panel) => (
+              <Tab
+                key={panel}
+                label={panel}
+                sx={{
+                  fontSize: "10px",
+                  padding: "0px 24px",
+                }}
+              />
+            ))}
+          </Tabs>
+        </Box>
+      </Box>
+
+      <Box ml={10} mt={2}>
         {children}
       </Box>
     </>
   );
-}
+};
+
+export default MainLayout;
